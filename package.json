@@ -1,0 +1,21 @@
+{
+  "name": "ember-3x-codemods",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "codemod-cli test",
+    "update-docs": "codemod-cli update-docs"
+  },
+  "bin": "./bin/cli.js",
+  "keywords": [
+    "codemod-cli"
+  ],
+  "dependencies": {
+    "codemod-cli": "^0.2.10"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
