@@ -1,9 +1,14 @@
 # ember-3x-codemods
 
+[![Build Status](https://travis-ci.org/rajasegar/ember-3x-codemods.svg?branch=master)](https://travis-ci.org/rajasegar/ember-3x-codemods) 
+[![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-3x-codemods/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-3x-codemods?branch=master)
+[![npm version](http://img.shields.io/npm/v/ember-3x-codemods.svg?style=flat)](https://npmjs.org/package/ember-3x-codemods "View this project on npm")
+[![dependencies Status](https://david-dm.org/rajasegar/ember-3x-codemods/status.svg)](https://david-dm.org/rajasegar/ember-3x-codemods)
+[![devDependencies Status](https://david-dm.org/rajasegar/ember-3x-codemods/dev-status.svg)](https://david-dm.org/rajasegar/ember-3x-codemods?type=dev)
 
-A collection of codemod's for ember-3x-codemods.
 
-## Usage
+
+A [jscodeshift]() Codemod with a collection of transforms to address the list of [deprecations](https://deprecations.emberjs.com/v3.x) introduced to Ember during the 3.x cycle
 
 To run a specific codemod from this project, you would run the following:
 
@@ -18,8 +23,31 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 
 ## Transforms
 
-<!--TRANSFORMS_START-->
-<!--TRANSFORMS_END-->
+### notify-property-change
+Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
+
+[Deprecations Added in 3.1](https://deprecations.emberjs.com/v3.x/#toc_use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange)
+
+#### Input
+```js
+Ember.propertyWillChange(object, 'someProperty');
+doStuff(object);
+Ember.propertyDidChange(object, 'someProperty');
+
+object.propertyWillChange('someProperty');
+doStuff(object);
+object.propertyDidChange('someProperty');
+```
+
+### Output
+```js
+doStuff(object);
+Ember.notifyPropertyChange(object, 'someProperty');
+
+doStuff(object);
+object.notifyPropertyChange('someProperty');
+```
+
 
 ## Contributing
 
