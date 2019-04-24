@@ -3,14 +3,25 @@
   "version": "1.0.0",
   "scripts": {
     "test": "codemod-cli test",
-    "update-docs": "codemod-cli update-docs"
+    "update-docs": "codemod-cli update-docs",
+    "deploy": "npm version patch && git push && git push --tags && npm publish"
   },
   "bin": "./bin/cli.js",
   "keywords": [
     "codemod-cli"
   ],
+  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajasegar/ember-3x-codemods/issues"
+  },
+  "homepage": "https://github.com/rajasegar/ember-3x-codemods#readme",
   "dependencies": {
     "codemod-cli": "^0.2.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajasegar/ember-3x-codemods.git"
   },
   "devDependencies": {
     "jest": "^24.1.0"
