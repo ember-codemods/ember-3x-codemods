@@ -24,30 +24,6 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 ### notify-property-change
-Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
-
-[Deprecations Added in 3.1](https://deprecations.emberjs.com/v3.x/#toc_use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange)
-
-#### Input
-```js
-Ember.propertyWillChange(object, 'someProperty');
-doStuff(object);
-Ember.propertyDidChange(object, 'someProperty');
-
-object.propertyWillChange('someProperty');
-doStuff(object);
-object.propertyDidChange('someProperty');
-```
-
-### Output
-```js
-doStuff(object);
-Ember.notifyPropertyChange(object, 'someProperty');
-
-doStuff(object);
-object.notifyPropertyChange('someProperty');
-```
-
 
 ## Contributing
 

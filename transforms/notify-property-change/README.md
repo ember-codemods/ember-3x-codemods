@@ -1,4 +1,7 @@
 # notify-property-change
+Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
+
+[Deprecations Added in 3.1](https://deprecations.emberjs.com/v3.x/#toc_use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange)
 
 
 ## Usage
@@ -14,8 +17,23 @@ ember-3x-codemods notify-property-change path/of/files/ or/some**/*glob.js
 
 ## Input / Output
 
-<!--FIXTURES_TOC_START-->
-<!--FIXTURES_TOC_END-->
+### Input
+```js
+Ember.propertyWillChange(object, 'someProperty');
+doStuff(object);
+Ember.propertyDidChange(object, 'someProperty');
 
-<!--FIXTURES_CONTENT_START-->
-<!--FIXTURES_CONTENT_END-->
+object.propertyWillChange('someProperty');
+doStuff(object);
+object.propertyDidChange('someProperty');
+```
+
+## Output
+```js
+doStuff(object);
+Ember.notifyPropertyChange(object, 'someProperty');
+
+doStuff(object);
+object.notifyPropertyChange('someProperty');
+```
+
