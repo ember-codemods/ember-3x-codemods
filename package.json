@@ -4,7 +4,9 @@
   "scripts": {
     "test": "codemod-cli test",
     "update-docs": "codemod-cli update-docs",
-    "deploy": "npm version patch && git push && git push --tags && npm publish"
+    "deploy": "npm version patch && git push && git push --tags && npm publish",
+    "deploy:feat": "npm version minor && git push && git push --tags && npm publish"
+
   },
   "bin": "./bin/cli.js",
   "keywords": [
