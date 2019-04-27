@@ -1,4 +1,4 @@
-# ember-3x-codemods
+# ember-3x-codemods [BETA]
 
 [![Build Status](https://travis-ci.org/rajasegar/ember-3x-codemods.svg?branch=master)](https://travis-ci.org/rajasegar/ember-3x-codemods) 
 [![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-3x-codemods/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-3x-codemods?branch=master)
@@ -24,6 +24,11 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 ### notify-property-change
+### cp-property
+### deprecate-merge
+### deprecate-router-events
+### jquery-apis
+### jquery-event
 
 ## Contributing
 
