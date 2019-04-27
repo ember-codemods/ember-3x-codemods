@@ -28,7 +28,7 @@ module.exports = function transformer(file, api) {
       //callee.object.arguments
       //console.log(path.value.callee.object.arguments);
       const isQuerySelector = path.value.callee.object.arguments.length > 0;
-      console.log(isQuerySelector);
+      //console.log(isQuerySelector);
       let newCallExp;
       if (isQuerySelector) {
         newCallExp = j.callExpression(
