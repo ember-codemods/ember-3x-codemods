@@ -2,10 +2,11 @@
   "name": "ember-3x-codemods",
   "version": "1.1.0",
   "scripts": {
-    "test": "codemod-cli test",
+    "test": "codemod-cli test --coverage",
     "update-docs": "codemod-cli update-docs",
     "deploy": "npm version patch && git push && git push --tags && npm publish",
-    "deploy:feat": "npm version minor && git push && git push --tags && npm publish"
+    "deploy:feat": "npm version minor && git push && git push --tags && npm publish",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "bin": "./bin/cli.js",
   "keywords": [
@@ -25,6 +26,7 @@
     "url": "git+https://github.com/rajasegar/ember-3x-codemods.git"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.1.0"
   },
   "jest": {
