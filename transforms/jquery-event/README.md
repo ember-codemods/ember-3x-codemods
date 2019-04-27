@@ -14,8 +14,27 @@ ember-3x-codemods jquery-event path/of/files/ or/some**/*glob.js
 
 ## Input / Output
 
-<!--FIXTURES_TOC_START-->
-<!--FIXTURES_TOC_END-->
 
-<!--FIXTURES_CONTENT_START-->
-<!--FIXTURES_CONTENT_END-->
+### From
+```js
+
+// your event handler:
+export default Component.extend({
+click(event) {
+  let x = event.originalEvent.clientX;
+}
+});
+
+```
+
+
+### To
+```js
+
+// your event handler:
+export default Component.extend({
+click(event) {
+  let x = event.clientX;
+}
+});
+```

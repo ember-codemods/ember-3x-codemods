@@ -14,8 +14,23 @@ ember-3x-codemods deprecate-merge path/of/files/ or/some**/*glob.js
 
 ## Input / Output
 
-<!--FIXTURES_TOC_START-->
-<!--FIXTURES_TOC_END-->
+### From
 
-<!--FIXTURES_CONTENT_START-->
-<!--FIXTURES_CONTENT_END-->
+```js
+import { merge } from '@ember/polyfills';
+
+var a = { first: 'Yehuda' };
+var b = { last: 'Katz' };
+merge(a, b);
+```
+
+### To
+
+```js
+import { assign } from '@ember/polyfills';
+
+var a = { first: 'Yehuda' };
+var b = { last: 'Katz' };
+assign(a, b);
+```
+

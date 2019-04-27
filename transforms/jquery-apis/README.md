@@ -12,10 +12,57 @@ yarn global add ember-3x-codemods
 ember-3x-codemods jquery-apis path/of/files/ or/some**/*glob.js
 ```
 
-## Input / Output
+## Events
 
-<!--FIXTURES_TOC_START-->
-<!--FIXTURES_TOC_END-->
+### From
+```js
 
-<!--FIXTURES_CONTENT_START-->
-<!--FIXTURES_CONTENT_END-->
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.$().on('transitionend', () => this.doSomething());
+  }
+});
+```
+
+### To
+
+```js
+
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.element.addEventListener('transitionend', () => this.doSomething());
+  }
+});
+
+```
+
+
+## Query Selector
+
+### From
+```js
+
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.$('.animated').on('transitionend', () => this.doSomething());
+  }
+});
+```
+
+### To
+```js
+
+import Component from '@ember/component';
+
+export default Component.extend({
+  waitForAnimation() {
+    this.element.querySelectorAll('.animated').forEach(el => el.addEventListener('transitionend', () => this.doSomething()));
+  }
+});
+```
