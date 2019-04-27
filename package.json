@@ -1,6 +1,6 @@
 {
   "name": "ember-3x-codemods",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "codemod-cli test",
     "update-docs": "codemod-cli update-docs",
