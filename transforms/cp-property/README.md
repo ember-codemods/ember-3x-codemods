@@ -14,8 +14,24 @@ ember-3x-codemods cp-property path/of/files/ or/some**/*glob.js
 
 ## Input / Output
 
-<!--FIXTURES_TOC_START-->
-<!--FIXTURES_TOC_END-->
 
-<!--FIXTURES_CONTENT_START-->
-<!--FIXTURES_CONTENT_END-->
+### From
+
+```js
+const Person = EmberObject.extend({
+  fullName: computed(function() {
+    return `${this.firstName} ${this.lastName}`;
+  }).property('firstName', 'lastName')
+});
+```
+
+
+### To
+
+```js
+const Person = EmberObject.extend({
+  fullName: computed('firstName', 'lastName', function() {
+    return `${this.firstName} ${this.lastName}`;
+  })
+});
+```

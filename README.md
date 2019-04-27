@@ -24,11 +24,29 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 ### notify-property-change
+Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
+[More Info](https://deprecations.emberjs.com/v3.x#toc_use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange)
+
 ### cp-property
+`.property()` is a modifier that adds additional property dependencies to an existing computed property
+[More Info](https://deprecations.emberjs.com/v3.x#toc_computed-property-property)
+
 ### deprecate-merge
+Using Ember.assign instead of Ember.merge
+[More Info](https://deprecations.emberjs.com/v3.x#toc_ember-polyfills-deprecate-merge)
+
 ### deprecate-router-events
+Application-wide transition monitoring events belong on the Router service, not spread throughout the Route classes. That is the reason for the existing willTransition and didTransition hooks/events on the Router. But they are not sufficient to capture all the detail people need.
+
+[More Info](https://deprecations.emberjs.com/v3.x#toc_deprecate-router-events)
+
 ### jquery-apis
+Replace jQuery APIs
+[More Info](https://deprecations.emberjs.com/v3.x#toc_jquery-apis)
+
 ### jquery-event
+Use native events instead of jQuery.Event
+[More Info](https://deprecations.emberjs.com/v3.x#toc_jquery-event)
 
 ## Contributing
 
