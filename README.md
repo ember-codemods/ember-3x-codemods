@@ -26,7 +26,7 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ### Deprecations & Transforms
 | Introduced in | id | Transform |
 | ------------- | -- | --------- |
-| 3.1           | use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange| [notify-property-change](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/notify-property-change) |
+| 3.1           | use-notifypropertychange... | [notify-property-change](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/notify-property-change) |
 | 3.3           | jquery-event| [jquery-event](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/jquery-event) |
 | 3.6           | ember-polyfills.deprecate-merge | [ deprecate-merge ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-merge) |
 | 3.6           | deprecate-router-events| [ deprecate-router-events ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-router-events) |
