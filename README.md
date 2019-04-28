@@ -1,4 +1,4 @@
-# ember-3x-codemods [BETA]
+# ember-3x-codemods
 
 [![Build Status](https://travis-ci.org/rajasegar/ember-3x-codemods.svg?branch=master)](https://travis-ci.org/rajasegar/ember-3x-codemods) 
 [![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-3x-codemods/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-3x-codemods?branch=master)
