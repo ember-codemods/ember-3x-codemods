@@ -36,6 +36,7 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 | 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-volatile) |
 | 3.8           | computed-property.property | [ cp-property-map ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property-map) |
 | 3.9           | jquery-apis| [ jquery-apis ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/jquery-apis) |
+| 3.10           | application-controller.router-properties| [ app-controller-router-props ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/app-controller-router-props) |
 | 3.11          | function-prototype-extensions.observes | [ fpe-observes ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-observes) |
 | 3.11          | function-prototype-extensions.on | [ fpe-on ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-on) |
 | 3.11          | function-prototype-extensions.property | [ fpe-computed ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-computed) |
