@@ -26,9 +26,20 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ### Deprecations & Transforms
 | Introduced in | id | Transform |
 | ------------- | -- | --------- |
+| 3.1          |  use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange| notify-property-change |
+| 3.3          |  jquery-event| jquery-event |
+| 3.6          | ember-polyfills.deprecate-merge | deprecate-merge |
+| 3.6          |  deprecate-router-events| deprecate-router-events |
+| 3.8          | computed-property.property | cp-property |
+| 3.8          | computed-property.volatile | cp-volatile |
+| 3.8          | computed-property.property | cp-property-map |
+| 3.9          |  jquery-apis| jquery-apis |
 | 3.11          | function-prototype-extensions.observes | fpe-observes |
 | 3.11          | function-prototype-extensions.on | fpe-on |
 | 3.11          | function-prototype-extensions.property | fpe-computed |
+
+
+For more details, please visit the main Ember 3.x [deprecations](https://deprecations.emberjs.com/v3.x) page
 
 ### notify-property-change
 Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
