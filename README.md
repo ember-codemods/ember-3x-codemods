@@ -23,6 +23,13 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 
 ## Transforms
 
+### Deprecations & Transforms
+| Introduced in | id | Transform |
+| ------------- | -- | --------- |
+| 3.11          | function-prototype-extensions.observes | fpe-observes |
+| 3.11          | function-prototype-extensions.on | fpe-on |
+| 3.11          | function-prototype-extensions.property | fpe-computed |
+
 ### notify-property-change
 Use notifyPropertyChange instead of propertyWillChange and propertyDidChange
 [More Info](https://deprecations.emberjs.com/v3.x#toc_use-notifypropertychange-instead-of-propertywillchange-and-propertydidchange)
