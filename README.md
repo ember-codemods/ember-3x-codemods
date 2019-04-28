@@ -8,7 +8,7 @@
 
 
 
-A [jscodeshift]() Codemod with a collection of transforms to address the list of [deprecations](https://deprecations.emberjs.com/v3.x) introduced to Ember during the 3.x cycle
+A [jscodeshift](https://github.com/facebook/jscodeshift) Codemod with a collection of transforms to address the list of [deprecations](https://deprecations.emberjs.com/v3.x) introduced to Ember during the 3.x cycle
 
 To run a specific codemod from this project, you would run the following:
 
