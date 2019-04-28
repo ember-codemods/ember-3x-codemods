@@ -30,6 +30,7 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 | 3.3           | jquery-event| [jquery-event](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/jquery-event) |
 | 3.6           | ember-polyfills.deprecate-merge | [ deprecate-merge ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-merge) |
 | 3.6           | deprecate-router-events| [ deprecate-router-events ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-router-events) |
+| 3.6           | array.new-array-wrapper | [ new-array-wrapper ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/new-array-wrapper) |
 | 3.8           | computed-property.property | [ cp-property ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property) |
 | 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-volatile) |
 | 3.8           | computed-property.property | [ cp-property-map ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property-map) |
