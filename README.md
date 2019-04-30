@@ -33,6 +33,7 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 | 3.6           | deprecate-router-events| [ deprecate-router-events ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-router-events) |
 | 3.6           | array.new-array-wrapper | [ new-array-wrapper ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/new-array-wrapper) |
 | 3.6           | array.new-array-wrapper | [ array-wrapper ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/array-wrapper) |
+| 3.6           | object.new-constructor | [ object-new-constructor ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/object-new-constructor) |
 | 3.8           | computed-property.property | [ cp-property ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property) |
 | 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-volatile) |
 | 3.8           | computed-property.property | [ cp-property-map ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property-map) |
