@@ -12,18 +12,18 @@
   "keywords": [
     "codemod-cli"
   ],
-  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rajasegar/ember-3x-codemods/issues"
+    "url": "https://github.com/ember-codemods/ember-3x-codemods/issues"
   },
-  "homepage": "https://github.com/rajasegar/ember-3x-codemods#readme",
+  "homepage": "https://github.com/ember-codemods/ember-3x-codemods#readme",
   "dependencies": {
     "codemod-cli": "^0.2.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rajasegar/ember-3x-codemods.git"
+    "url": "git+https://github.com/ember-codemods/ember-3x-codemods.git"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
