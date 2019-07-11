@@ -1,10 +1,10 @@
 # ember-3x-codemods
 
-[![Build Status](https://travis-ci.org/rajasegar/ember-3x-codemods.svg?branch=master)](https://travis-ci.org/rajasegar/ember-3x-codemods) 
-[![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-3x-codemods/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-3x-codemods?branch=master)
+[![Build Status](https://travis-ci.org/ember-codemods/ember-3x-codemods.svg?branch=master)](https://travis-ci.org/ember-codemods/ember-3x-codemods) 
+[![Coverage Status](https://coveralls.io/repos/github/ember-codemods/ember-3x-codemods/badge.svg?branch=master)](https://coveralls.io/github/ember-codemods/ember-3x-codemods?branch=master)
 [![npm version](http://img.shields.io/npm/v/ember-3x-codemods.svg?style=flat)](https://npmjs.org/package/ember-3x-codemods "View this project on npm")
-[![dependencies Status](https://david-dm.org/rajasegar/ember-3x-codemods/status.svg)](https://david-dm.org/rajasegar/ember-3x-codemods)
-[![devDependencies Status](https://david-dm.org/rajasegar/ember-3x-codemods/dev-status.svg)](https://david-dm.org/rajasegar/ember-3x-codemods?type=dev)
+[![dependencies Status](https://david-dm.org/ember-codemods/ember-3x-codemods/status.svg)](https://david-dm.org/ember-codemods/ember-3x-codemods)
+[![devDependencies Status](https://david-dm.org/ember-codemods/ember-3x-codemods/dev-status.svg)](https://david-dm.org/ember-codemods/ember-3x-codemods?type=dev)
 
 
 
@@ -26,22 +26,22 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ### Deprecations & Transforms
 | Introduced in | id | Transform |
 | ------------- | -- | --------- |
-| 3.1           | use-notifypropertychange... | [notify-property-change](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/notify-property-change) |
-| 3.3           | jquery-event| [jquery-event](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/jquery-event) |
-| 3.3           | jquery-event| [ember-jquery-legacy](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/ember-jquery-legacy) |
-| 3.6           | ember-polyfills.deprecate-merge | [ deprecate-merge ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-merge) |
-| 3.6           | deprecate-router-events| [ deprecate-router-events ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/deprecate-router-events) |
-| 3.6           | array.new-array-wrapper | [ new-array-wrapper ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/new-array-wrapper) |
-| 3.6           | array.new-array-wrapper | [ array-wrapper ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/array-wrapper) |
-| 3.6           | object.new-constructor | [ object-new-constructor ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/object-new-constructor) |
-| 3.8           | computed-property.property | [ cp-property ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property) |
-| 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-volatile) |
-| 3.8           | computed-property.property | [ cp-property-map ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/cp-property-map) |
-| 3.9           | jquery-apis| [ jquery-apis ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/jquery-apis) |
-| 3.10           | application-controller.router-properties| [ app-controller-router-props ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/app-controller-router-props) |
-| 3.11          | function-prototype-extensions.observes | [ fpe-observes ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-observes) |
-| 3.11          | function-prototype-extensions.on | [ fpe-on ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-on) |
-| 3.11          | function-prototype-extensions.property | [ fpe-computed ](https://github.com/rajasegar/ember-3x-codemods/tree/master/transforms/fpe-computed) |
+| 3.1           | use-notifypropertychange... | [notify-property-change](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/notify-property-change) |
+| 3.3           | jquery-event| [jquery-event](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/jquery-event) |
+| 3.3           | jquery-event| [ember-jquery-legacy](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/ember-jquery-legacy) |
+| 3.6           | ember-polyfills.deprecate-merge | [ deprecate-merge ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/deprecate-merge) |
+| 3.6           | deprecate-router-events| [ deprecate-router-events ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/deprecate-router-events) |
+| 3.6           | array.new-array-wrapper | [ new-array-wrapper ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/new-array-wrapper) |
+| 3.6           | array.new-array-wrapper | [ array-wrapper ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/array-wrapper) |
+| 3.6           | object.new-constructor | [ object-new-constructor ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/object-new-constructor) |
+| 3.8           | computed-property.property | [ cp-property ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property) |
+| 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-volatile) |
+| 3.8           | computed-property.property | [ cp-property-map ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property-map) |
+| 3.9           | jquery-apis| [ jquery-apis ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/jquery-apis) |
+| 3.10           | application-controller.router-properties| [ app-controller-router-props ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/app-controller-router-props) |
+| 3.11          | function-prototype-extensions.observes | [ fpe-observes ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/fpe-observes) |
+| 3.11          | function-prototype-extensions.on | [ fpe-on ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/fpe-on) |
+| 3.11          | function-prototype-extensions.property | [ fpe-computed ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/fpe-computed) |
 
 
 For more details, please visit the main Ember 3.x [deprecations](https://deprecations.emberjs.com/v3.x) page
