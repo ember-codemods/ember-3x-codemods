@@ -34,9 +34,9 @@ ember-3x-codemods <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 | 3.6           | array.new-array-wrapper | [ new-array-wrapper ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/new-array-wrapper) |
 | 3.6           | array.new-array-wrapper | [ array-wrapper ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/array-wrapper) |
 | 3.6           | object.new-constructor | [ object-new-constructor ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/object-new-constructor) |
-| 3.8           | computed-property.property | [ cp-property ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property) |
-| 3.8           | computed-property.volatile | [ cp-volatile ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-volatile) |
-| 3.8           | computed-property.property | [ cp-property-map ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property-map) |
+| 3.9           | computed-property.property | [ cp-property ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property) |
+| 3.9           | computed-property.volatile | [ cp-volatile ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-volatile) |
+| 3.9           | computed-property.property | [ cp-property-map ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/cp-property-map) |
 | 3.9           | jquery-apis| [ jquery-apis ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/jquery-apis) |
 | 3.10           | application-controller.router-properties| [ app-controller-router-props ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/app-controller-router-props) |
 | 3.11          | function-prototype-extensions.observes | [ fpe-observes ](https://github.com/ember-codemods/ember-3x-codemods/tree/master/transforms/fpe-observes) |
