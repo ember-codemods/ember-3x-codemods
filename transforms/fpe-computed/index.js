@@ -10,6 +10,7 @@ module.exports = function transformer(file, api) {
     .find(j.CallExpression, {
       callee: {
         type: "MemberExpression",
+        object: { type: "FunctionExpression" },
         property: { name: "computed" }
       }
     })
@@ -30,5 +31,5 @@ module.exports = function transformer(file, api) {
     });
 
 
-  return root.toSource();
+  return root.toSource({quote: 'single'});
 }
