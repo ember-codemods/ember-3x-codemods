@@ -30,5 +30,5 @@ module.exports = function transformer(file, api) {
     });
 
   
-  return root.toSource();
+  return root.toSource({quote: 'single'});
 }

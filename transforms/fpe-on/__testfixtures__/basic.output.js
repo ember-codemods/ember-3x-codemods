@@ -1,4 +1,4 @@
-import { on } from "@ember/object/evented";
+import { on } from '@ember/object/evented';
 import EmberObject from '@ember/object';
 import { sendEvent } from '@ember/object/events';
 
