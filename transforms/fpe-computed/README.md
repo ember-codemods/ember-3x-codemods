@@ -50,7 +50,7 @@ client.get('fullName'); // 'Betty Fuller'
 
 **Output** (<small>[basic.output.js](transforms/fpe-computed/__testfixtures__/basic.output.js)</small>):
 ```js
-import { computed } from "@ember/object";
+import { computed } from '@ember/object';
 import EmberObject from '@ember/object';
 
 let Person = EmberObject.extend({
