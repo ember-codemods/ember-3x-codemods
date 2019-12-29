@@ -11,7 +11,7 @@ module.exports = function transformer(file, api) {
       callee: {
         type: "MemberExpression",
         object: { type: "FunctionExpression" },
-        property: { name: "computed" }
+        property: { name: "property" }
       }
     })
     //.forEach(p => console.log(p))
