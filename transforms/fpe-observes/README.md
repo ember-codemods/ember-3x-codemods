@@ -22,7 +22,7 @@ ember-3x-codemods fpe-observes path/of/files/ or/some**/*glob.js
 ---
 <a id="basic">**basic**</a>
 
-**Input** (<small>[basic.input.js](transforms/fpe-observes/__testfixtures__/basic.input.js)</small>):
+**Input** (<small>[basic.input.js](__testfixtures__/basic.input.js)</small>):
 ```js
 import EmberObject from '@ember/object';
 
@@ -34,7 +34,7 @@ export default EmberObject.extend({
 
 ```
 
-**Output** (<small>[basic.output.js](transforms/fpe-observes/__testfixtures__/basic.output.js)</small>):
+**Output** (<small>[basic.output.js](__testfixtures__/basic.output.js)</small>):
 ```js
 import EmberObject from '@ember/object';
 
