@@ -17,13 +17,16 @@ module.exports = function transformer(file, api) {
     //.forEach(p => console.log(p.value.callee.object.arguments[0].body))
     .map(p => p.parentPath)
     .replaceWith(path => {
+      // Find the function expression in the arguments
+      const fnExp = path.value.value.callee.object.arguments.find(a => a.type === 'FunctionExpression');
+      const fnBody = fnExp.body
       return j.property(
         "get",
         j.identifier(path.value.key.name),
         j.functionExpression(
           j.identifier(path.value.key.name),
           [],
-          path.value.value.callee.object.arguments[0].body,
+          fnBody,
           false,
           false
         )
