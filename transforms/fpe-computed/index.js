@@ -6,6 +6,18 @@ module.exports = function transformer(file, api) {
   const options = getOptions();
   const root = j(file.source);
 
+  let alreadyHasImport = false;
+
+  const importDeclaration = root.find(j.ImportDeclaration, {
+    source: {
+      value: '@ember/object',
+    },
+  });
+
+  const importComputed = importDeclaration.find(j.ImportSpecifier, { imported: { name: 'computed' } });
+
+  if (importComputed.size()) alreadyHasImport = true;
+
   root
     .find(j.CallExpression, {
       callee: {
@@ -14,15 +26,18 @@ module.exports = function transformer(file, api) {
         property: { name: "property" }
       }
     })
-    //.forEach(p => console.log(p))
     .replaceWith(path => {
       let computedImport = j.importDeclaration(
         [j.importSpecifier(j.identifier("computed"))],
         j.literal("@ember/object")
       );
 
-      let body = root.get().value.program.body;
-      body.unshift(computedImport);
+      if (!alreadyHasImport) {
+        let body = root.get().value.program.body;
+
+        body.unshift(computedImport);
+        alreadyHasImport = true;
+      }
 
       return j.callExpression(
         j.identifier("computed"),
