@@ -28,12 +28,14 @@ module.exports = function transformer(file, api) {
       //console.log(path.value.callee.object.arguments);
       const isQuerySelector = path.value.callee.object.arguments.length > 0;
       const isOnOff = ["on", "off"].includes(path.value.callee.property?.name);
-      const IsDomEvent = ["click", "blur", "change", "focus", "focusin", "select", "submit", "keydown", "keypress", "keyup", "focusout", "click", "dblclick", "focusout", "hover", "mousedown", "mouseenter", "mouseleave", "mousemove", "mouseout", "mouseover", "mouseup", "toggle", "error", "resize", "scroll", "load", "ready", "unload"].includes(path.value.callee.property?.name);
+      const IsDomEvent = ["click", "blur", "change", "focus", "focusin", "select", "submit", "keydown", "keypress", "keyup", "focusout", "click", "dblclick", "focusout", "hover", "mousedown", "mouseenter", "mouseleave", "mousemove", "mouseout", "mouseover", "mouseup", "toggle", "error", "resize", "scroll", "load", "ready", "unload"].includes(path.value.arguments?.[0]?.value);
+      const IsHTMLElementAction = ["click", "blur", "focus", "select"].includes(path.value.callee.property?.name);
+
       console.log(path.value.callee.property?.name);
       let newCallExp;
       if (isQuerySelector) {
 
-        if (isOnOff) {
+        if (isOnOff && IsDomEvent) {
           const isOn = ["on"].includes(path.value.callee.property?.name);
 
           newCallExp = j.callExpression(
@@ -59,7 +61,7 @@ module.exports = function transformer(file, api) {
               )
             ]
           );
-        } else if (IsDomEvent) {
+        } else if (IsHTMLElementAction) {
           newCallExp = j.callExpression(
             j.memberExpression(
               j.callExpression(
@@ -76,8 +78,7 @@ module.exports = function transformer(file, api) {
               j.arrowFunctionExpression(
                 [j.identifier("el")],
                 j.callExpression(
-                  j.memberExpression(j.identifier("el"), j.identifier("addEventListener"), false),
-                  [j.literal(path.value.callee.property?.name), ...path.value.arguments]
+                  j.memberExpression(j.identifier("el"), j.identifier(path.value.callee.property?.name), false), []
                 ),
                 false
               )
@@ -88,7 +89,7 @@ module.exports = function transformer(file, api) {
           newCallExp = path.node;
         }
       } else {
-        if (isOnOff) {
+        if (isOnOff && IsDomEvent) {
           const isOn = ["on"].includes(path.value.callee.property?.name);
           newCallExp = j.callExpression(
             j.memberExpression(
@@ -98,14 +99,14 @@ module.exports = function transformer(file, api) {
             ),
             path.value.arguments
           );
-        } else if (IsDomEvent) {
+        } else if (IsHTMLElementAction) {
           newCallExp = j.callExpression(
             j.memberExpression(
               j.memberExpression(j.thisExpression(), j.identifier("element"), false),
-              j.identifier("addEventListener"),
+              j.identifier(path.value.callee.property?.name),
               false
             ),
-            [j.literal(path.value.callee.property?.name), ...path.value.arguments]
+            []
           );
 
         } else {
